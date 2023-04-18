@@ -26,8 +26,14 @@ export class EmpAddEditComponent {
       gender: '',
       tscuola: '',
       denominazione: '',
-      numvisitatori: '',
-      numinsegnanti: '',
+      numVisitatori: '',
+      numInsegnanti: '',
     })
   }
+
+  onFormSubmit() {
+  if(this.empForm.valid) {
+      console.log(this.empForm.value)
+    }
+}
 }

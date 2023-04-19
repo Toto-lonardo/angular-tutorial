@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "prenotazioni": [
+    {
+      "firstName": "Mario",
+      "lastName": "Pippo",
+      "email": "pippo@preti.it",
+      "dpr": "2023-04-05T22:00:00.000Z",
+      "gender": "1",
+      "tscuola": "Elementare",
+      "denominazione": "dfdfdfdfd",
+      "numVisitatori": 1,
+      "numInsegnanti": 3,
+      "id": 1
+    }
+  ]
+}

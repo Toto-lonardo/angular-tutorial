@@ -28,6 +28,18 @@
       "numVisitatori": 1,
       "numInsegnanti": 3,
       "id": 1
+    },
+    {
+      "firstName": "Mimma",
+      "lastName": "Capatonda",
+      "email": "mimma@capatonda.it",
+      "dpr": "2023-04-20T22:00:00.000Z",
+      "gender": "2",
+      "tscuola": "Elementare",
+      "denominazione": "Maccio Production",
+      "numVisitatori": 13,
+      "numInsegnanti": 1,
+      "id": 2
     }
   ]
 }

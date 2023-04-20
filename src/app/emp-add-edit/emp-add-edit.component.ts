@@ -1,5 +1,7 @@
+import {DialogRef} from '@angular/cdk/dialog';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import {PrenotazioniService} from '../services/prenotazioni.service';
 
 @Component({
   selector: 'app-emp-add-edit',
@@ -17,7 +19,7 @@ export class EmpAddEditComponent {
   'Universita',
   ]
 
-  constructor(private _fb: FormBuilder) {
+  constructor(private _fb: FormBuilder, private _empService:PrenotazioniService, private _dialogRef: DialogRef<EmpAddEditComponent>) {
     this.empForm = this._fb.group({
       firstName: '',
       lastName: '',
@@ -33,7 +35,15 @@ export class EmpAddEditComponent {
 
   onFormSubmit() {
   if(this.empForm.valid) {
-      console.log(this.empForm.value)
+    this._empService.addPrenotazione(this.empForm.value).subscribe({
+      next: (val: any)=> {
+        alert('Prenotazioni aggiunta con successo');
+        this._dialogRef.close();
+      },
+      error: (err: any) => {
+     console.error(err);
+      },
+    })
     }
 }
 }
